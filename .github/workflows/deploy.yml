@@ -44,7 +44,7 @@ jobs:
       - uses: databricks/setup-cli@main
 
       - run: databricks bundle deploy
-        working-directory: .
+        working-directory: dab_GA_test
         env:
           DATABRICKS_TOKEN: ${{ secrets.SP_TOKEN }}
           DATABRICKS_BUNDLE_ENV: prod

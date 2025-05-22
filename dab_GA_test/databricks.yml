@@ -17,6 +17,7 @@ targets:
     default: true
     workspace:
       host: https://adb-50447683504017.17.azuredatabricks.net
+      root_path: /Workspace/Users/husainsayyad2000@gmail.com/.bundle/${bundle.name}/${bundle.target}
 
   prod:
     mode: production
