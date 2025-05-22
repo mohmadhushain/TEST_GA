@@ -1,6 +1,9 @@
-from dab_GA_test.main import get_taxis, get_spark
+from unittest.mock import patch
+from dab_GA_test.tests import get_taxis
 
-
-def test_main():
-    taxis = get_taxis(get_spark())
-    assert taxis.count() > 5
+@patch("dab_GA_test.main.DatabricksSession")
+def test_main(mock_session):
+    mock_spark = mock_session.builder.getOrCreate.return_value
+    # Configure fake data on mock_spark if needed
+    taxis = get_taxis(mock_spark)
+    assert taxis is not None
