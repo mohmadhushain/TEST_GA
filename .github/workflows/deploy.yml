@@ -27,6 +27,7 @@ jobs:
 
       - name: Install dependencies
         run: pip install -r requirements-dev.txt
+        working-directory: dab_GA_test
 
       - name: Run tests
         run: python -m pytest
