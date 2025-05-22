@@ -1,5 +1,5 @@
 from unittest.mock import patch
-from dab_GA_test.tests import get_taxis
+from dab_GA_test.main import get_taxis
 
 @patch("dab_GA_test.main.DatabricksSession")
 def test_main(mock_session):
